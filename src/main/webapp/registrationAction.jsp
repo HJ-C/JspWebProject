@@ -18,7 +18,7 @@
 	int sizeLimit = 15*1024*1024;
 	
 	//String realPath = request.getServletContext().getRealPath("images");
-	String realPath = "C://Users//si_va//바탕 화면//JspWebProject//src//main//webapp";
+	String realPath = "C://Users//apem5//OneDrive//바탕 화면//JspWebProject//src//main//webapp//images";
 		File dir = new File(realPath);
 	if(!dir.exists()) {
 		dir.mkdirs();
