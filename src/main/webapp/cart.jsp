@@ -63,7 +63,7 @@
 				<div class="text">
 					<span style="display:block; text-align:center;">장바구니 비었습니다!</span>
 				</div>
-				<div class="img"><img src="./images/shipping-box.jpg"  width="720" height="720" ></div>
+				<div class="img"><img src="./images/shipping-box.jpg"  width="720px" height="720px" ></div>
 <%
 	} else {
 %>

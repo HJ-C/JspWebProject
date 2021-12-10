@@ -16,7 +16,7 @@
 	<!-- 부트스트랩 CSS 추가하기 -->
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<!-- 커스텀 CSS 추가하기 -->
-	<link rel="stylesheet" href="./css/Detail.css" type="text/css">
+	<link rel="stylesheet" href="css/Detail.css" type="text/css">
 </head>
 <body>
 <%	
@@ -87,7 +87,7 @@
                   </tr>
                   <tr>
                       <th>제조사</th>
-                      <td>나이키</td>
+                      <td><%=data.getCompanyId() %></td>
                   </tr>
                   <tr>
                      <th>상품정보</th>

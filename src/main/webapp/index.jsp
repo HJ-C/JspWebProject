@@ -19,15 +19,12 @@
 	<link rel="stylesheet" href="./css/custom.css" type="text/css">
 </head>
 <body>
-
-
 <%
 	String userID = null;
 	if(session.getAttribute("userID") != null) {
 		userID = (String) session.getAttribute("userID");
 	}
 %>
-
    <!-- Header -->
    <div id="haderWrap">
       <header id="header">
@@ -40,14 +37,14 @@
             <ul class="clearfix">
                <li><a href="userLogin.jsp">로그인</a></li>
                <li><a href="userJoin.jsp">회원가입</a></li>
-               <li><a href="./cart.jsp">장바구니</a></li>
-               <li><a href="./registration.jsp">등록하기</a></li>
 <%
    } else {
 %>
                <li><a href="userLogout.jsp">로그아웃</a></li>
+               <li><a href="./cart.jsp">장바구니</a></li>
                <li><a href="#"><b>즐겨찾기</b></a></li>
                <li><a href="#"><b>내상점</b></a></li>
+               <li><a href="./registration.jsp">등록하기</a></li>
                <li class="userID"><%=userID %>님 환영합니다!</li>
             </ul>
 <%
@@ -66,10 +63,9 @@
       </header>
    </div>
 <!-- 헤더끝 -->
-
    <!-- top section 시작 -->
    <section id="top">
-      <div id="bg" style="background:url('./images/스키.jpg'); no-repeat; fixed; background-size:cover;" >
+      <div id="bg" style="background:url('./images/스키.jpg'); no-repeat fixed; background-size:cover;" >
          <h4>스키 시즌 준비하기</h4>
          <h2>슬슬 들려오는 스키장 개장 소식.<br> 가장 중요한 스키부터 추위를 막아줄 스키복, 눈을 보호해줄 고글까지.<br>이번 시즌은 중고마켓에서 준비해보세요!</h2>
       </div>
@@ -110,8 +106,6 @@
       </div>
    </section>
    
-   
-
 <%
 	ProductDAO pdDao = new ProductDAO();	
 	ProductDTO data = new ProductDTO();
@@ -123,9 +117,9 @@
          <p class="top_txt">중고마켓이 추천하는 제품 입니다</p>
          <ul class="clearfix">
 <%
-      ArrayList<ProductDTO> pdList = pdDao.pdList();
-     //String realPath = "C://Users//apem5//OneDrive//바탕 화면//JspWebProject//src//main//webapp//images//";
-      for(ProductDTO p:pdList) {
+	ArrayList<ProductDTO> pdList = pdDao.pdList();
+	//String realPath = "C://Users//apem5//OneDrive//바탕 화면//JspWebProject//src//main//webapp//images//";
+	for(ProductDTO p:pdList) {
 %>
             <li>
                   <div class="img_wrap">
@@ -135,9 +129,9 @@
                   </div>
                   <p class="tit"><%=p.getProductName() %></p>
             </li>
-            <%
-         }
-      %>
+<%
+	}
+%>
          </ul>
       </div>
       
@@ -145,28 +139,26 @@
          <a href="#" >더 보기 <i class="xi-angle-down-min"></i></a>
       </div>
    </section>
-	
-	
-			<!-- footer -->
-			<footer>
-				<div class="inner">
-					<ul class="menu">
-						<li><a href="javascript:void(0)" class= "green">개인정보 처리방침</a></li>
-						<li><a href="javascript:void(0)">운영관리 방침</a></li>
-						<li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
-						<li><a href="javascript:void(0)">위치정보 이용약관</a></li>
-					</ul>
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<ul class="menu">
+				<li><a href="javascript:void(0)" class= "green">개인정보 처리방침</a></li>
+				<li><a href="javascript:void(0)">운영관리 방침</a></li>
+				<li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
+				<li><a href="javascript:void(0)">위치정보 이용약관</a></li>
+			</ul>
 		
-				<div class="info">
-					<span>사업자 등록번호 201-80-12345</span>
-					<span>(주)중고마켓</span>
-					<span>TEL : 02) 1111-1111 /FAX : 031) 1111-1111</span>
-					<span>개인정보 책임자 : 홍길동</span>
-				</div>
+		<div class="info">
+			<span>사업자 등록번호 201-80-12345</span>
+			<span>(주)Market</span>
+			<span>TEL : 02) 1111-1111 /FAX : 031) 1111-1111</span>
+			<span>개인정보 책임자 : 최현준</span>
+		</div>
 		
 				
-				</div>
-			</footer>
+		</div>
+	</footer>
 
 
 	<!-- 제이쿼리 자바스크립트 추가하기 -->
